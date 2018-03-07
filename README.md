@@ -36,7 +36,7 @@ $cars[0]="Volvo";
 $cars[1]="BMW";
 $cars[2]="SAAB";
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 关联数组
 使用您分配给数组的指定键的数组。
@@ -49,7 +49,7 @@ $age['Peter']="35";
 $age['Ben']="37";
 $age['Joe']="43";
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 多维数组
 包含一个或多个数组的数组。
@@ -69,7 +69,7 @@ $cars[1][0] = 'BMW';
 $cars[1][0] = 15;
 $cars[1][0] = 13;
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 输出当前元素的值
 **current()**
@@ -78,7 +78,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo current($people) ; // 当前元素是 Bill
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 输出最后一个元素的值
 **end()**
@@ -87,7 +87,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo end($people) ; // 最后一个元素是 David
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 输出下一个元素的值
 **next()**
@@ -96,7 +96,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo next($people) ; // Bill 的下一个元素是 Steve
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 输出上一个元素的值
 **prev()**
@@ -105,7 +105,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo prev($people) ; // David 之前的元素是 Mark
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 
 ## 输出第一个元素的值
@@ -115,7 +115,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo reset($people) ; // 把内部指针移动到数组的首个元素，即 Bill
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 输出当前元素的键名和键值，并将内部指针向前移动
 **each()**
@@ -125,7 +125,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 each($people) ; // 返回当前元素的键名和键值，即'0'=> Bill
 echo current($people); //并将内部指针向前移动, 即Steve
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ##  统计元素数量
 **count()**
@@ -134,7 +134,7 @@ $a = array(0,1,2,3);
 
 echo count($a); // 4
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 输出当前元素键名
 **key()**
@@ -143,7 +143,7 @@ $a = array('key'=>'value');
 
 echo key($a); // key
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 创建包含变量名和它们的值的数组
 **compact()**
@@ -156,7 +156,7 @@ $result = compact("firstname", "lastname", "age");
 
 print_r($result); // Array ( [firstname] => Bill [lastname] => Gates [age] => 60 )
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 从数组中将变量导入到当前的符号表
 **extract()**
@@ -168,4 +168,4 @@ extract($var_array);
 
 echo "$color, $size, $shape"; // blue, medium, sphere
 ```
-<br>[⬆ Back to top](##table-of-contents)
+<br>[⬆ Back to top](#table-of-contents)
