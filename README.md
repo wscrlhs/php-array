@@ -1,5 +1,5 @@
 
->收藏的PHP数组相关的知识，随插随用。
+>收藏的PHP数组相关的知识
 
 # table-of-contents 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -13,10 +13,12 @@
 - [输出最后一个元素的值](#%E8%BE%93%E5%87%BA%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
 - [输出下一个元素的值](#%E8%BE%93%E5%87%BA%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
 - [输出上一个元素的值](#%E8%BE%93%E5%87%BA%E4%B8%8A%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
-- [内部指针重置到第一个元素](#%E5%86%85%E9%83%A8%E6%8C%87%E9%92%88%E9%87%8D%E7%BD%AE%E5%88%B0%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0)
+- [输出第一个元素的值](#%E8%BE%93%E5%87%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
 - [输出当前元素的键名和键值，并将内部指针向前移动](#%E8%BE%93%E5%87%BA%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E9%94%AE%E5%90%8D%E5%92%8C%E9%94%AE%E5%80%BC%E5%B9%B6%E5%B0%86%E5%86%85%E9%83%A8%E6%8C%87%E9%92%88%E5%90%91%E5%89%8D%E7%A7%BB%E5%8A%A8)
 - [统计元素数量](#%E7%BB%9F%E8%AE%A1%E5%85%83%E7%B4%A0%E6%95%B0%E9%87%8F)
 - [输出当前元素键名](#%E8%BE%93%E5%87%BA%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E9%94%AE%E5%90%8D)
+- [创建包含变量名和它们的值的数组](#%E5%88%9B%E5%BB%BA%E5%8C%85%E5%90%AB%E5%8F%98%E9%87%8F%E5%90%8D%E5%92%8C%E5%AE%83%E4%BB%AC%E7%9A%84%E5%80%BC%E7%9A%84%E6%95%B0%E7%BB%84)
+- [从数组中将变量导入到当前的符号表](#%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E5%B0%86%E5%8F%98%E9%87%8F%E5%AF%BC%E5%85%A5%E5%88%B0%E5%BD%93%E5%89%8D%E7%9A%84%E7%AC%A6%E5%8F%B7%E8%A1%A8)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -106,7 +108,7 @@ echo prev($people) ; // David 之前的元素是 Mark
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 内部指针重置到第一个元素
+## 输出第一个元素的值
 reset()
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
@@ -129,6 +131,7 @@ echo current($people); //并将内部指针向前移动, 即Steve
 count()
 ```php
 $a = array(0,1,2,3);
+
 echo count($a); // 4
 ```
 <br>[⬆ Back to top](#table-of-contents)
@@ -137,4 +140,32 @@ echo count($a); // 4
 key()
 ```php
 $a = array('key'=>'value');
+
 echo key($a); // key
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 创建包含变量名和它们的值的数组
+compact()
+```php
+$firstname = "Bill";
+$lastname = "Gates";
+$age = "60";
+
+$result = compact("firstname", "lastname", "age");
+
+print_r($result); // Array ( [firstname] => Bill [lastname] => Gates [age] => 60 )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 从数组中将变量导入到当前的符号表
+extract()
+```php
+$var_array = array("color" => "blue",
+                   "size"  => "medium",
+                   "shape" => "sphere");
+extract($var_array);
+
+echo "$color, $size, $shape"; // blue, medium, sphere
+```
+<br>[⬆ Back to top](#table-of-contents)
