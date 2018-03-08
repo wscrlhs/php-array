@@ -29,6 +29,11 @@
 - [对数组按照键名逆向排序,由高到低](#%E5%AF%B9%E6%95%B0%E7%BB%84%E6%8C%89%E7%85%A7%E9%94%AE%E5%90%8D%E9%80%86%E5%90%91%E6%8E%92%E5%BA%8F%E7%94%B1%E9%AB%98%E5%88%B0%E4%BD%8E)
 - [对数组进行排序并保持索引关系,由低到高](#%E5%AF%B9%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E5%B9%B6%E4%BF%9D%E6%8C%81%E7%B4%A2%E5%BC%95%E5%85%B3%E7%B3%BB%E7%94%B1%E4%BD%8E%E5%88%B0%E9%AB%98)
 - [对数组进行逆向排序并保持索引关系,由高到低](#%E5%AF%B9%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E9%80%86%E5%90%91%E6%8E%92%E5%BA%8F%E5%B9%B6%E4%BF%9D%E6%8C%81%E7%B4%A2%E5%BC%95%E5%85%B3%E7%B3%BB%E7%94%B1%E9%AB%98%E5%88%B0%E4%BD%8E)
+- [使用用户自定义的比较函数对数组中的值进行排序](#%E4%BD%BF%E7%94%A8%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E6%AF%94%E8%BE%83%E5%87%BD%E6%95%B0%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%80%BC%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F)
+- [使用用户自定义的比较函数对数组中的值进行排序并保持索引关联](#%E4%BD%BF%E7%94%A8%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E6%AF%94%E8%BE%83%E5%87%BD%E6%95%B0%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%80%BC%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E5%B9%B6%E4%BF%9D%E6%8C%81%E7%B4%A2%E5%BC%95%E5%85%B3%E8%81%94)
+- [使用用户自定义的比较函数对数组中的键名进行排序](#%E4%BD%BF%E7%94%A8%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E6%AF%94%E8%BE%83%E5%87%BD%E6%95%B0%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%94%AE%E5%90%8D%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F)
+- [用“自然排序”算法对数组排序](#%E7%94%A8%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F)
+- [用“自然排序”算法对数组进行不区分大小写字母的排序](#%E7%94%A8%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%E7%9A%84%E6%8E%92%E5%BA%8F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -41,7 +46,7 @@
 ```php
 $cars=array("Volvo","BMW","SAAB");
 
-//or
+// anathor ways
 $cars[0]="Volvo";
 $cars[1]="BMW";
 $cars[2]="SAAB";
@@ -54,7 +59,7 @@ $cars[2]="SAAB";
 ```php
 $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
 
-//or
+// another ways
 $age['Peter']="35";
 $age['Ben']="37";
 $age['Joe']="43";
@@ -71,7 +76,7 @@ $cars = array
   array("BMW",15,13),
   );
 
-//or
+// another ways
 $cars[0][0] = 'Volvo' ;
 $cars[0][1] = 22;
 $cars[0][2] = 18 ;
@@ -86,7 +91,7 @@ $cars[1][0] = 13;
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
-echo current($people) ; // 当前元素是 Bill
+echo current($people); // 当前元素是 Bill
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -95,7 +100,7 @@ echo current($people) ; // 当前元素是 Bill
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
-echo end($people) ; // 最后一个元素是 David
+echo end($people); // 最后一个元素是 David
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -104,7 +109,7 @@ echo end($people) ; // 最后一个元素是 David
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
-echo next($people) ; // Bill 的下一个元素是 Steve
+echo next($people); // Bill 的下一个元素是 Steve
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -113,7 +118,7 @@ echo next($people) ; // Bill 的下一个元素是 Steve
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
-echo prev($people) ; // David 之前的元素是 Mark
+echo prev($people); // David 之前的元素是 Mark
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -123,7 +128,7 @@ echo prev($people) ; // David 之前的元素是 Mark
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
-echo reset($people) ; // 把内部指针移动到数组的首个元素，即 Bill
+echo reset($people); // 把内部指针移动到数组的首个元素，即 Bill
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -132,8 +137,8 @@ echo reset($people) ; // 把内部指针移动到数组的首个元素，即 Bil
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
-each($people) ; // 返回当前元素的键名和键值，即'0'=> Bill
-echo current($people); //并将内部指针向前移动, 即Steve
+each($people); // 返回当前元素的键名和键值，即'0'=> Bill
+echo current($people); // 并将内部指针向前移动, 即Steve
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -185,9 +190,8 @@ echo "$color, $size, $shape"; // blue, medium, sphere
 ```php
 $os = array("Mac", "NT", "Irix", "Linux");
 if (in_array("Irix", $os)) {
-    echo "Got Irix";
+    echo "Got Irix"; // Got Irix
 }
-//output Got Irix
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -196,9 +200,8 @@ if (in_array("Irix", $os)) {
 ```php
 $info = array('coffee', 'brown', 'caffeine');
 
-// 列出所有变量
 list($drink, $color, $power) = $info;
-echo "$drink is $color and $power makes it special.\n";// coffee is brown and caffeine makes it special.
+echo "$drink is $color and $power makes it special."; // coffee is brown and caffeine makes it special.
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -206,7 +209,7 @@ echo "$drink is $color and $power makes it special.\n";// coffee is brown and ca
 **[range()](http://php.net/manual/zh/function.range.php)**
 ```php
 $number = range(0, 5);
-print_r($number);// Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] => 5 ) 
+print_r($number); // Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] => 5 ) 
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -214,6 +217,7 @@ print_r($number);// Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] => 
 **[shuffle](http://php.net/manual/zh/function.shuffle.php)**
 ```php
 $number = range(0, 5);
+
 shuffle($number);
 print_r($number); //  Array ( [0] => 2 [1] => 4 [2] => 0 [3] => 5 [4] => 3 [5] => 1 ) 
 ```
@@ -222,56 +226,163 @@ print_r($number); //  Array ( [0] => 2 [1] => 4 [2] => 0 [3] => 5 [4] => 3 [5] =
 ## 对数组排序,由低到高
 **[sort()](http://php.net/manual/zh/function.sort.php)**
 ```php
-
+// Array to be sorted
 $fruits = array("lemon", "orange", "banana", "apple");
+
+// Sort and print the resulting array
 sort($fruits);
-print_r($fruits);//  Array ( [0] => apple [1] => banana [2] => lemon [3] => orange )
+print_r($fruits); //  Array ( [0] => apple [1] => banana [2] => lemon [3] => orange )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 对数组逆向排序,由高到低
 **[rsort()](http://php.net/manual/zh/function.rsort.php)**
 ```php
-
+// Array to be sorted
 $fruits = array("lemon", "orange", "banana", "apple");
+
+// Sort and print the resulting array
 rsort($fruits);
-print_r($fruits);// Array ( [0] => orange [1] => lemon [2] => banana [3] => apple )
+print_r($fruits); // Array ( [0] => orange [1] => lemon [2] => banana [3] => apple )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 对数组按照键名排序,由低到高
 **[ksort()](http://php.net/manual/zh/function.ksort.php)**
 ```php
+// Array to be sorted
 $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+
+// Sort and print the resulting array
 ksort($fruits);
-print_r($fruits);// Array ( [a] => orange [b] => banana [c] => apple [d] => lemon )
+print_r($fruits); // Array ( [a] => orange [b] => banana [c] => apple [d] => lemon )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 对数组按照键名逆向排序,由高到低
-**{krsort()](http://php.net/manual/zh/function.krsort.php)**
+**[krsort()](http://php.net/manual/zh/function.krsort.php)**
 ```php
+// Array to be sorted
 $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+
+// Sort and print the resulting array
 krsort($fruits);
-print_r($fruits);// Array ( [d] => lemon [c] => apple [b] => banana [a] => orange )
+print_r($fruits); // Array ( [d] => lemon [c] => apple [b] => banana [a] => orange )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ##  对数组进行排序并保持索引关系,由低到高
 **[asort()](http://php.net/manual/zh/function.asort.php)**
 ```php
+// Array to be sorted
 $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+
+// Sort and print the resulting array
 asort($fruits);
-print_r($fruits);// Array ( [c] => apple [b] => banana [d] => lemon [a] => orange )
+print_r($fruits); // Array ( [c] => apple [b] => banana [d] => lemon [a] => orange )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 对数组进行逆向排序并保持索引关系,由高到低
 **[arsort()](http://php.net/manual/zh/function.arsort.php)**
 ```php
+// Array to be sorted
 $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+
+// Sort and print the resulting array
 arsort($fruits);
-print_r($fruits);// Array ( [a] => orange [d] => lemon [b] => banana [c] => apple )
+print_r($fruits); // Array ( [a] => orange [d] => lemon [b] => banana [c] => apple )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
+## 使用用户自定义的比较函数对数组中的值进行排序
+**[usort()](http://php.net/manual/zh/function.usort.php)**
+```php
+function cmp($a, $b)
+{
+    if ($a == $b) {
+        return 0;
+    }
+    return ($a < $b) ? -1 : 1;
+}
+
+// Array to be sorted
+$a = array(3, 2, 5, 6, 1);
+
+// Sort and print the resulting array
+usort($a, "cmp");
+print_r($a); // Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 5 [4] => 6 )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 使用用户自定义的比较函数对数组中的值进行排序并保持索引关联
+**[uasort()](http://php.net/manual/zh/function.uasort.php)**
+```php
+function cmp($a, $b)
+{
+    if ($a == $b) {
+        return 0;
+    }
+    return ($a < $b) ? -1 : 1;
+}
+
+// Array to be sorted
+$array = array('a' => 4, 'b' => 8, 'c' => -1, 'd' => -9, 'e' => 2, 'f' => 5, 'g' => 3, 'h' => -4);
+
+// Sort and print the resulting array
+uasort($array, 'cmp');
+print_r($array); // Array ( [d] => -9 [h] => -4 [c] => -1 [e] => 2 [g] => 3 [a] => 4 [f] => 5 [b] => 8 )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+##  使用用户自定义的比较函数对数组中的键名进行排序
+**[uksort()](http://php.net/manual/zh/function.uksort.php)**
+```php
+function cmp($a, $b)
+{
+    if ($a == $b) {
+        return 0;
+    }
+    return ($a < $b) ? -1 : 1;
+}
+
+// Array to be sorted
+$array = array('f' => 5, 'a' => 4, 'h' => -4, 'd' => -9, 'c' => -1, 'e' => 2, 'g' => 3, 'b' => 8);
+
+// Sort and print the resulting array
+uksort($array, 'cmp');
+print_r($array); // Array ( [a] => 4 [b] => 8 [c] => -1 [d] => -9 [e] => 2 [f] => 5 [g] => 3 [h] => -4 )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 用“自然排序”算法对数组排序
+**[natsort()](http://php.net/manual/zh/function.natsort.php)**
+```php
+// Array to be sorted
+$array1 = $array2 = array("img12.png", "img10.png", "img2.png", "img1.png");
+
+// Standard sorting
+asort($array1);
+print_r($array1); //  Array ( [3] => img1.png [1] => img10.png [0] => img12.png [2] => img2.png ) 
+
+//nNatural order sorting
+natsort($array2);
+print_r($array2); // Array ( [3] => img1.png [2] => img2.png [1] => img10.png [0] => img12.png )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 用“自然排序”算法对数组进行不区分大小写字母的排序
+**[natcasesort()](http://php.net/manual/zh/function.natcasesort.php)**
+```php
+// Array to be sorted
+$array1 = $array2 = array('IMG0.png', 'img12.png', 'img10.png', 'img2.png', 'img1.png', 'IMG3.png');
+
+// Standard sorting
+sort($array1);
+print_r($array1); // Array ( [0] => IMG0.png [1] => IMG3.png [2] => img1.png [3] => img10.png [4] => img12.png [5] => img2.png )
+
+// nNatural order sorting (case-insensitive)
+natcasesort($array2);
+print_r($array2); // Array ( [0] => IMG0.png [4] => img1.png [3] => img2.png [5] => IMG3.png [2] => img10.png [1] => img12.png )
+```
+<br>[⬆ Back to top](#table-of-contents)
