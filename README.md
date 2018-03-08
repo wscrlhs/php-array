@@ -9,16 +9,26 @@
 - [索引数组](#%E7%B4%A2%E5%BC%95%E6%95%B0%E7%BB%84)
 - [关联数组](#%E5%85%B3%E8%81%94%E6%95%B0%E7%BB%84)
 - [多维数组](#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84)
-- [输出当前元素的值](#%E8%BE%93%E5%87%BA%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
-- [输出最后一个元素的值](#%E8%BE%93%E5%87%BA%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
-- [输出下一个元素的值](#%E8%BE%93%E5%87%BA%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
-- [输出上一个元素的值](#%E8%BE%93%E5%87%BA%E4%B8%8A%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
-- [输出第一个元素的值](#%E8%BE%93%E5%87%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
-- [输出当前元素的键名和键值，并将内部指针向前移动](#%E8%BE%93%E5%87%BA%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E9%94%AE%E5%90%8D%E5%92%8C%E9%94%AE%E5%80%BC%E5%B9%B6%E5%B0%86%E5%86%85%E9%83%A8%E6%8C%87%E9%92%88%E5%90%91%E5%89%8D%E7%A7%BB%E5%8A%A8)
-- [统计元素数量](#%E7%BB%9F%E8%AE%A1%E5%85%83%E7%B4%A0%E6%95%B0%E9%87%8F)
-- [输出当前元素键名](#%E8%BE%93%E5%87%BA%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E9%94%AE%E5%90%8D)
+- [输出数组中当前元素的值](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
+- [输出数组中最后一个元素的值](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
+- [输出数组中下一个元素的值](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
+- [输出数组中上一个元素的值](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%8A%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
+- [输出数组中第一个元素的值](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
+- [输出数组中当前元素的键名和键值，并将内部指针向前移动](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E9%94%AE%E5%90%8D%E5%92%8C%E9%94%AE%E5%80%BC%E5%B9%B6%E5%B0%86%E5%86%85%E9%83%A8%E6%8C%87%E9%92%88%E5%90%91%E5%89%8D%E7%A7%BB%E5%8A%A8)
+- [统计数组中元素数量](#%E7%BB%9F%E8%AE%A1%E6%95%B0%E7%BB%84%E4%B8%AD%E5%85%83%E7%B4%A0%E6%95%B0%E9%87%8F)
+- [输出数组中当前元素键名](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E9%94%AE%E5%90%8D)
 - [创建包含变量名和它们的值的数组](#%E5%88%9B%E5%BB%BA%E5%8C%85%E5%90%AB%E5%8F%98%E9%87%8F%E5%90%8D%E5%92%8C%E5%AE%83%E4%BB%AC%E7%9A%84%E5%80%BC%E7%9A%84%E6%95%B0%E7%BB%84)
 - [从数组中将变量导入到当前的符号表](#%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E5%B0%86%E5%8F%98%E9%87%8F%E5%AF%BC%E5%85%A5%E5%88%B0%E5%BD%93%E5%89%8D%E7%9A%84%E7%AC%A6%E5%8F%B7%E8%A1%A8)
+- [检查数组中是否存在指定的值](#%E6%A3%80%E6%9F%A5%E6%95%B0%E7%BB%84%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E5%80%BC)
+- [把数组中的值赋给一组变量](#%E6%8A%8A%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%80%BC%E8%B5%8B%E7%BB%99%E4%B8%80%E7%BB%84%E5%8F%98%E9%87%8F)
+- [建立一个包含指定范围单元的数组](#%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E5%8D%95%E5%85%83%E7%9A%84%E6%95%B0%E7%BB%84)
+- [打乱数组](#%E6%89%93%E4%B9%B1%E6%95%B0%E7%BB%84)
+- [对数组排序,由低到高](#%E5%AF%B9%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E7%94%B1%E4%BD%8E%E5%88%B0%E9%AB%98)
+- [对数组逆向排序,由高到低](#%E5%AF%B9%E6%95%B0%E7%BB%84%E9%80%86%E5%90%91%E6%8E%92%E5%BA%8F%E7%94%B1%E9%AB%98%E5%88%B0%E4%BD%8E)
+- [对数组按照键名排序,由低到高](#%E5%AF%B9%E6%95%B0%E7%BB%84%E6%8C%89%E7%85%A7%E9%94%AE%E5%90%8D%E6%8E%92%E5%BA%8F%E7%94%B1%E4%BD%8E%E5%88%B0%E9%AB%98)
+- [对数组按照键名逆向排序,由高到低](#%E5%AF%B9%E6%95%B0%E7%BB%84%E6%8C%89%E7%85%A7%E9%94%AE%E5%90%8D%E9%80%86%E5%90%91%E6%8E%92%E5%BA%8F%E7%94%B1%E9%AB%98%E5%88%B0%E4%BD%8E)
+- [对数组进行排序并保持索引关系,由低到高](#%E5%AF%B9%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E5%B9%B6%E4%BF%9D%E6%8C%81%E7%B4%A2%E5%BC%95%E5%85%B3%E7%B3%BB%E7%94%B1%E4%BD%8E%E5%88%B0%E9%AB%98)
+- [对数组进行逆向排序并保持索引关系,由高到低](#%E5%AF%B9%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E9%80%86%E5%90%91%E6%8E%92%E5%BA%8F%E5%B9%B6%E4%BF%9D%E6%8C%81%E7%B4%A2%E5%BC%95%E5%85%B3%E7%B3%BB%E7%94%B1%E9%AB%98%E5%88%B0%E4%BD%8E)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -71,8 +81,8 @@ $cars[1][0] = 13;
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 输出当前元素的值
-**current()**
+## 输出数组中当前元素的值
+**[current()](http://php.net/manual/zh/function.current.php)**
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
@@ -80,8 +90,8 @@ echo current($people) ; // 当前元素是 Bill
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 输出最后一个元素的值
-**end()**
+## 输出数组中最后一个元素的值
+**[end()](http://php.net/manual/zh/function.end.php)**
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
@@ -89,8 +99,8 @@ echo end($people) ; // 最后一个元素是 David
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 输出下一个元素的值
-**next()**
+## 输出数组中下一个元素的值
+**[next()](http://php.net/manual/zh/function.next.php)**
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
@@ -98,8 +108,8 @@ echo next($people) ; // Bill 的下一个元素是 Steve
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 输出上一个元素的值
-**prev()**
+## 输出数组中上一个元素的值
+**[prev()](http://php.net/manual/zh/function.prev.php)**
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
@@ -108,8 +118,8 @@ echo prev($people) ; // David 之前的元素是 Mark
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 输出第一个元素的值
-**reset()**
+## 输出数组中第一个元素的值
+**[reset()](http://php.net/manual/zh/function.reset.php)**
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
@@ -117,8 +127,8 @@ echo reset($people) ; // 把内部指针移动到数组的首个元素，即 Bil
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 输出当前元素的键名和键值，并将内部指针向前移动
-**each()**
+## 输出数组中当前元素的键名和键值，并将内部指针向前移动
+**[each()](http://php.net/manual/zh/function.each.php)**
 ```php
 $people = array("Bill", "Steve", "Mark", "David");
 
@@ -127,8 +137,8 @@ echo current($people); //并将内部指针向前移动, 即Steve
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-##  统计元素数量
-**count()**
+##  统计数组中元素数量
+**[count()](http://php.net/manual/zh/function.count.php)**
 ```php
 $a = array(0,1,2,3);
 
@@ -136,8 +146,8 @@ echo count($a); // 4
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 输出当前元素键名
-**key()**
+## 输出数组中当前元素键名
+**[key()](http://php.net/manual/zh/function.key.php)**
 ```php
 $a = array('key'=>'value');
 
@@ -146,7 +156,7 @@ echo key($a); // key
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 创建包含变量名和它们的值的数组
-**compact()**
+**[compact()[http://php.net/manual/zh/function.compact.php)**
 ```php
 $firstname = "Bill";
 $lastname = "Gates";
@@ -159,7 +169,7 @@ print_r($result); // Array ( [firstname] => Bill [lastname] => Gates [age] => 60
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 从数组中将变量导入到当前的符号表
-**extract()**
+**[extract()](http://php.net/manual/zh/function.extract.php)**
 ```php
 $var_array = array("color" => "blue",
                    "size"  => "medium",
@@ -169,3 +179,99 @@ extract($var_array);
 echo "$color, $size, $shape"; // blue, medium, sphere
 ```
 <br>[⬆ Back to top](#table-of-contents)
+
+## 检查数组中是否存在指定的值
+**[in_array()](http://php.net/manual/zh/function.in-array.php)**
+```php
+$os = array("Mac", "NT", "Irix", "Linux");
+if (in_array("Irix", $os)) {
+    echo "Got Irix";
+}
+//output Got Irix
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 把数组中的值赋给一组变量
+**[list()](http://php.net/manual/zh/function.list.php)**
+```php
+$info = array('coffee', 'brown', 'caffeine');
+
+// 列出所有变量
+list($drink, $color, $power) = $info;
+echo "$drink is $color and $power makes it special.\n";// coffee is brown and caffeine makes it special.
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 建立一个包含指定范围单元的数组
+**[range()](http://php.net/manual/zh/function.range.php)**
+```php
+$number = range(0, 5);
+print_r($number);// Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] => 5 ) 
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 打乱数组
+**[shuffle](http://php.net/manual/zh/function.shuffle.php)**
+```php
+$number = range(0, 5);
+shuffle($number);
+print_r($number); //  Array ( [0] => 2 [1] => 4 [2] => 0 [3] => 5 [4] => 3 [5] => 1 ) 
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 对数组排序,由低到高
+**[sort()](http://php.net/manual/zh/function.sort.php)**
+```php
+
+$fruits = array("lemon", "orange", "banana", "apple");
+sort($fruits);
+print_r($fruits);//  Array ( [0] => apple [1] => banana [2] => lemon [3] => orange )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 对数组逆向排序,由高到低
+**[rsort()](http://php.net/manual/zh/function.rsort.php)**
+```php
+
+$fruits = array("lemon", "orange", "banana", "apple");
+rsort($fruits);
+print_r($fruits);// Array ( [0] => orange [1] => lemon [2] => banana [3] => apple )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 对数组按照键名排序,由低到高
+**[ksort()](http://php.net/manual/zh/function.ksort.php)**
+```php
+$fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+ksort($fruits);
+print_r($fruits);// Array ( [a] => orange [b] => banana [c] => apple [d] => lemon )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 对数组按照键名逆向排序,由高到低
+**{krsort()](http://php.net/manual/zh/function.krsort.php)**
+```php
+$fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+krsort($fruits);
+print_r($fruits);// Array ( [d] => lemon [c] => apple [b] => banana [a] => orange )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+##  对数组进行排序并保持索引关系,由低到高
+**[asort()](http://php.net/manual/zh/function.asort.php)**
+```php
+$fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+asort($fruits);
+print_r($fruits);// Array ( [c] => apple [b] => banana [d] => lemon [a] => orange )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 对数组进行逆向排序并保持索引关系,由高到低
+**[arsort()](http://php.net/manual/zh/function.arsort.php)**
+```php
+$fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+arsort($fruits);
+print_r($fruits);// Array ( [a] => orange [d] => lemon [b] => banana [c] => apple )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
