@@ -34,6 +34,9 @@
 - [使用用户自定义的比较函数对数组中的键名进行排序](#%E4%BD%BF%E7%94%A8%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E6%AF%94%E8%BE%83%E5%87%BD%E6%95%B0%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%94%AE%E5%90%8D%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F)
 - [用“自然排序”算法对数组排序](#%E7%94%A8%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F)
 - [用“自然排序”算法对数组进行不区分大小写字母的排序](#%E7%94%A8%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%E7%9A%84%E6%8E%92%E5%BA%8F)
+- [返回数组中指定的一列](#%E8%BF%94%E5%9B%9E%E6%95%B0%E7%BB%84%E4%B8%AD%E6%8C%87%E5%AE%9A%E7%9A%84%E4%B8%80%E5%88%97)
+- [将一个数组分割成多个](#%E5%B0%86%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E5%88%86%E5%89%B2%E6%88%90%E5%A4%9A%E4%B8%AA)
+- [从数组中取出一段](#%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E5%8F%96%E5%87%BA%E4%B8%80%E6%AE%B5)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -379,10 +382,65 @@ $array1 = $array2 = array('IMG0.png', 'img12.png', 'img10.png', 'img2.png', 'img
 
 // Standard sorting
 sort($array1);
-print_r($array1); // Array ( [0] => IMG0.png [1] => IMG3.png [2] => img1.png [3] => img10.png [4] => img12.png [5] => img2.png )
+print_r($array1);
+// Array ( [0] => IMG0.png [1] => IMG3.png [2] => img1.png [3] => img10.png [4] => img12.png [5] => img2.png )
 
 // nNatural order sorting (case-insensitive)
 natcasesort($array2);
-print_r($array2); // Array ( [0] => IMG0.png [4] => img1.png [3] => img2.png [5] => IMG3.png [2] => img10.png [1] => img12.png )
+print_r($array2); 
+// Array ( [0] => IMG0.png [4] => img1.png [3] => img2.png [5] => IMG3.png [2] => img10.png [1] => img12.png )
 ```
 <br>[⬆ Back to top](#table-of-contents)
+
+## 返回数组中指定的一列
+**[array_column()](http://php.net/manual/zh/function.array-column.php)**
+```php
+// Array representing a possible record set returned from a database
+$records = array(
+    array(
+        'id' => 2135,
+        'first_name' => 'John',
+        'last_name' => 'Doe',
+    ),
+    array(
+        'id' => 3245,
+        'first_name' => 'Sally',
+        'last_name' => 'Smith',
+    ),
+    array(
+        'id' => 5342,
+        'first_name' => 'Jane',
+        'last_name' => 'Jones',
+    ),
+    array(
+        'id' => 5623,
+        'first_name' => 'Peter',
+        'last_name' => 'Doe',
+    )
+);
+
+$first_names = array_column($records, 'first_name');
+print_r($first_names); // Array ( [0] => John [1] => Sally [2] => Jane [3] => Peter )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 将一个数组分割成多个
+**[array_chunk()](http://php.net/manual/zh/function.array-chunk.php)**
+```php
+$input_array = array('a', 'b', 'c', 'd', 'e');
+
+$output_array = array_chunk($input_array, 2);
+print_r($output_array);
+// Array ( [0] => Array ( [0] => a [1] => b ) [1] => Array ( [0] => c [1] => d ) [2] => Array ( [0] => e ) )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+##  从数组中取出一段
+$input = array("a", "b", "c", "d", "e");
+
+$output = array_slice($input, 2);      // returns "c", "d", and "e"
+$output = array_slice($input, -2, 1);  // returns "d"
+$output = array_slice($input, 0, 3);   // returns "a", "b", and "c"
+```
+<br>[⬆ Back to top](#table-of-contents)
+
