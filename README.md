@@ -436,6 +436,8 @@ print_r($output_array);
 <br>[⬆ Back to top](#table-of-contents)
 
 ##  从数组中取出一段
+**[array_slice()](http://php.net/manual/zh/function.array-slice.php)**
+```php
 $input = array("a", "b", "c", "d", "e");
 
 $output = array_slice($input, 2);      // returns "c", "d", and "e"
