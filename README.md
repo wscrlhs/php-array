@@ -7,7 +7,7 @@
   - [索引数组](#%E7%B4%A2%E5%BC%95%E6%95%B0%E7%BB%84)
   - [关联数组](#%E5%85%B3%E8%81%94%E6%95%B0%E7%BB%84)
   - [多维数组](#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84)
-- [获取](#%E8%8E%B7%E5%8F%96)
+- [取值](#%E5%8F%96%E5%80%BC)
   - [输出数组中当前元素的值](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
   - [输出数组中最后一个元素的值](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
   - [输出数组中下一个元素的值](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%80%BC)
@@ -17,14 +17,20 @@
   - [输出数组中当前元素键名](#%E8%BE%93%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E9%94%AE%E5%90%8D)
   - [返回数组中部分的或所有的键名](#%E8%BF%94%E5%9B%9E%E6%95%B0%E7%BB%84%E4%B8%AD%E9%83%A8%E5%88%86%E7%9A%84%E6%88%96%E6%89%80%E6%9C%89%E7%9A%84%E9%94%AE%E5%90%8D)
   - [返回数组中所有的值](#%E8%BF%94%E5%9B%9E%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%80%E6%9C%89%E7%9A%84%E5%80%BC)
+  - [返回单元顺序相反的数组](#%E8%BF%94%E5%9B%9E%E5%8D%95%E5%85%83%E9%A1%BA%E5%BA%8F%E7%9B%B8%E5%8F%8D%E7%9A%84%E6%95%B0%E7%BB%84)
   - [返回数组中指定的一列](#%E8%BF%94%E5%9B%9E%E6%95%B0%E7%BB%84%E4%B8%AD%E6%8C%87%E5%AE%9A%E7%9A%84%E4%B8%80%E5%88%97)
+  - [从数组中随机取出一个或多个单元](#%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E9%9A%8F%E6%9C%BA%E5%8F%96%E5%87%BA%E4%B8%80%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AA%E5%8D%95%E5%85%83)
 - [操作](#%E6%93%8D%E4%BD%9C)
   - [将数组中的所有键名修改为全大写或小写](#%E5%B0%86%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E9%94%AE%E5%90%8D%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%85%A8%E5%A4%A7%E5%86%99%E6%88%96%E5%B0%8F%E5%86%99)
   - [从数组中取出一段](#%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E5%8F%96%E5%87%BA%E4%B8%80%E6%AE%B5)
   - [把数组中的值赋给一组变量](#%E6%8A%8A%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%80%BC%E8%B5%8B%E7%BB%99%E4%B8%80%E7%BB%84%E5%8F%98%E9%87%8F)
   - [建立一个包含指定范围单元的数组](#%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E5%8D%95%E5%85%83%E7%9A%84%E6%95%B0%E7%BB%84)
+  - [去掉数组中的某一部分并用其它值取代](#%E5%8E%BB%E6%8E%89%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%80%E9%83%A8%E5%88%86%E5%B9%B6%E7%94%A8%E5%85%B6%E5%AE%83%E5%80%BC%E5%8F%96%E4%BB%A3)
+  - [在数组中搜索给定的值，如果成功则返回首个相应的键名](#%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%AD%E6%90%9C%E7%B4%A2%E7%BB%99%E5%AE%9A%E7%9A%84%E5%80%BC%E5%A6%82%E6%9E%9C%E6%88%90%E5%8A%9F%E5%88%99%E8%BF%94%E5%9B%9E%E9%A6%96%E4%B8%AA%E7%9B%B8%E5%BA%94%E7%9A%84%E9%94%AE%E5%90%8D)
   - [打乱数组](#%E6%89%93%E4%B9%B1%E6%95%B0%E7%BB%84)
   - [移除数组中重复的值](#%E7%A7%BB%E9%99%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E5%80%BC)
+  - [将一个数组分割成多个](#%E5%B0%86%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E5%88%86%E5%89%B2%E6%88%90%E5%A4%9A%E4%B8%AA)
+  - [交换数组中的键和值](#%E4%BA%A4%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC)
   - [创建一个数组，用一个数组的值作为其键名，另一个数组的值作为其值](#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E7%94%A8%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E5%80%BC%E4%BD%9C%E4%B8%BA%E5%85%B6%E9%94%AE%E5%90%8D%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E5%80%BC%E4%BD%9C%E4%B8%BA%E5%85%B6%E5%80%BC)
   - [创建包含变量名和它们的值的数组](#%E5%88%9B%E5%BB%BA%E5%8C%85%E5%90%AB%E5%8F%98%E9%87%8F%E5%90%8D%E5%92%8C%E5%AE%83%E4%BB%AC%E7%9A%84%E5%80%BC%E7%9A%84%E6%95%B0%E7%BB%84)
   - [从数组中将变量导入到当前的符号表](#%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E5%B0%86%E5%8F%98%E9%87%8F%E5%AF%BC%E5%85%A5%E5%88%B0%E5%BD%93%E5%89%8D%E7%9A%84%E7%AC%A6%E5%8F%B7%E8%A1%A8)
@@ -40,17 +46,54 @@
   - [使用用户自定义的比较函数对数组中的键名进行排序](#%E4%BD%BF%E7%94%A8%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E6%AF%94%E8%BE%83%E5%87%BD%E6%95%B0%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%94%AE%E5%90%8D%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F)
   - [用“自然排序”算法对数组排序](#%E7%94%A8%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F)
   - [用“自然排序”算法对数组进行不区分大小写字母的排序](#%E7%94%A8%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%E7%9A%84%E6%8E%92%E5%BA%8F)
-- [统计检查](#%E7%BB%9F%E8%AE%A1%E6%A3%80%E6%9F%A5)
+  - [对多个数组或多维数组进行排序](#%E5%AF%B9%E5%A4%9A%E4%B8%AA%E6%95%B0%E7%BB%84%E6%88%96%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F)
+- [计算](#%E8%AE%A1%E7%AE%97)
   - [统计数组中元素数量](#%E7%BB%9F%E8%AE%A1%E6%95%B0%E7%BB%84%E4%B8%AD%E5%85%83%E7%B4%A0%E6%95%B0%E9%87%8F)
   - [统计数组中所有的值](#%E7%BB%9F%E8%AE%A1%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%80%E6%9C%89%E7%9A%84%E5%80%BC)
+  - [对数组中所有值求和](#%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%80%E6%9C%89%E5%80%BC%E6%B1%82%E5%92%8C)
+  - [计算数组中所有值的乘积](#%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%80%E6%9C%89%E5%80%BC%E7%9A%84%E4%B9%98%E7%A7%AF)
+- [检查](#%E6%A3%80%E6%9F%A5)
   - [检查数组里是否有指定的键名或索引](#%E6%A3%80%E6%9F%A5%E6%95%B0%E7%BB%84%E9%87%8C%E6%98%AF%E5%90%A6%E6%9C%89%E6%8C%87%E5%AE%9A%E7%9A%84%E9%94%AE%E5%90%8D%E6%88%96%E7%B4%A2%E5%BC%95)
   - [检查数组中是否存在某个值](#%E6%A3%80%E6%9F%A5%E6%95%B0%E7%BB%84%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%9F%90%E4%B8%AA%E5%80%BC)
-- [分割合并替换](#%E5%88%86%E5%89%B2%E5%90%88%E5%B9%B6%E6%9B%BF%E6%8D%A2)
-  - [将一个数组分割成多个](#%E5%B0%86%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E5%88%86%E5%89%B2%E6%88%90%E5%A4%9A%E4%B8%AA)
+- [合并](#%E5%90%88%E5%B9%B6)
   - [合并一个或多个数组](#%E5%90%88%E5%B9%B6%E4%B8%80%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AA%E6%95%B0%E7%BB%84)
   - [递归地合并一个或多个数组](#%E9%80%92%E5%BD%92%E5%9C%B0%E5%90%88%E5%B9%B6%E4%B8%80%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AA%E6%95%B0%E7%BB%84)
+- [替换](#%E6%9B%BF%E6%8D%A2)
   - [使用传递的数组替换第一个数组的元素](#%E4%BD%BF%E7%94%A8%E4%BC%A0%E9%80%92%E7%9A%84%E6%95%B0%E7%BB%84%E6%9B%BF%E6%8D%A2%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%83%E7%B4%A0)
   - [使用传递的数组递归替换第一个数组的元素](#%E4%BD%BF%E7%94%A8%E4%BC%A0%E9%80%92%E7%9A%84%E6%95%B0%E7%BB%84%E9%80%92%E5%BD%92%E6%9B%BF%E6%8D%A2%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%83%E7%B4%A0)
+- [填充](#%E5%A1%AB%E5%85%85)
+  - [使用指定的键和值填充数组](#%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC%E5%A1%AB%E5%85%85%E6%95%B0%E7%BB%84)
+  - [用给定的值填充数组](#%E7%94%A8%E7%BB%99%E5%AE%9A%E7%9A%84%E5%80%BC%E5%A1%AB%E5%85%85%E6%95%B0%E7%BB%84)
+  - [以指定长度将一个值填充进数组](#%E4%BB%A5%E6%8C%87%E5%AE%9A%E9%95%BF%E5%BA%A6%E5%B0%86%E4%B8%80%E4%B8%AA%E5%80%BC%E5%A1%AB%E5%85%85%E8%BF%9B%E6%95%B0%E7%BB%84)
+- [堆栈](#%E5%A0%86%E6%A0%88)
+  - [将数组开头的单元移出数组](#%E5%B0%86%E6%95%B0%E7%BB%84%E5%BC%80%E5%A4%B4%E7%9A%84%E5%8D%95%E5%85%83%E7%A7%BB%E5%87%BA%E6%95%B0%E7%BB%84)
+  - [在数组开头插入一个或多个单元](#%E5%9C%A8%E6%95%B0%E7%BB%84%E5%BC%80%E5%A4%B4%E6%8F%92%E5%85%A5%E4%B8%80%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AA%E5%8D%95%E5%85%83)
+  - [弹出数组最后一个单元（出栈）](#%E5%BC%B9%E5%87%BA%E6%95%B0%E7%BB%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E5%85%83%E5%87%BA%E6%A0%88)
+  - [将一个或多个单元压入数组的末尾（入栈）](#%E5%B0%86%E4%B8%80%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AA%E5%8D%95%E5%85%83%E5%8E%8B%E5%85%A5%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%AB%E5%B0%BE%E5%85%A5%E6%A0%88)
+- [回调](#%E5%9B%9E%E8%B0%83)
+  - [对数组中的每个成员递归地应用用户函数](#%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E6%88%90%E5%91%98%E9%80%92%E5%BD%92%E5%9C%B0%E5%BA%94%E7%94%A8%E7%94%A8%E6%88%B7%E5%87%BD%E6%95%B0)
+  - [使用用户自定义函数对数组中的每个元素做回调处理](#%E4%BD%BF%E7%94%A8%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E5%81%9A%E5%9B%9E%E8%B0%83%E5%A4%84%E7%90%86)
+  - [为数组的每个元素应用回调函数](#%E4%B8%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E5%BA%94%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0)
+  - [用回调函数迭代地将数组简化为单一的值](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%BF%AD%E4%BB%A3%E5%9C%B0%E5%B0%86%E6%95%B0%E7%BB%84%E7%AE%80%E5%8C%96%E4%B8%BA%E5%8D%95%E4%B8%80%E7%9A%84%E5%80%BC)
+  - [用回调函数过滤数组中的单元](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%8D%95%E5%85%83)
+- [差集](#%E5%B7%AE%E9%9B%86)
+  - [带索引检查计算数组的差集](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [使用键名比较计算数组的差集](#%E4%BD%BF%E7%94%A8%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [用用户提供的回调函数做索引检查来计算数组的差集](#%E7%94%A8%E7%94%A8%E6%88%B7%E6%8F%90%E4%BE%9B%E7%9A%84%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%81%9A%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [用回调函数对键名比较计算数组的差集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AF%B9%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [计算数组的差集](#%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [带索引检查计算数组的差集，用回调函数比较数据](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE)
+  - [带索引检查计算数组的差集，用回调函数比较数据和索引](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE%E5%92%8C%E7%B4%A2%E5%BC%95)
+  - [用回调函数比较数据来计算数组的差集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+- [交集](#%E4%BA%A4%E9%9B%86)
+  - [带索引检查计算数组的交集](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
+  - [使用键名比较计算数组的交集](#%E4%BD%BF%E7%94%A8%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
+  - [带索引检查计算数组的交集，用回调函数比较索引](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E7%B4%A2%E5%BC%95)
+  - [用回调函数比较键名来计算数组的交集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E9%94%AE%E5%90%8D%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
+  - [计算数组的交集](#%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
+  - [带索引检查计算数组的交集，用回调函数比较数据](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE)
+  - [带索引检查计算数组的交集，用单独的回调函数比较数据和索引](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%8D%95%E7%8B%AC%E7%9A%84%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE%E5%92%8C%E7%B4%A2%E5%BC%95)
+  - [计算数组的交集，用回调函数比较数据](#%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -98,7 +141,7 @@ $cars[1][0] = 13;
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 获取
+## 取值
 ### 输出数组中当前元素的值
 **[current()](http://php.net/manual/zh/function.current.php)**
 ```php
@@ -186,6 +229,16 @@ print_r($result); // Array ( [0] => XL [1] => gold )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
+### 返回单元顺序相反的数组
+**[array_reverse()](http://php.net/manual/zh/function.array-reverse.php)**
+```php
+$input  = array("php", 4.0, array("green", "red"));
+
+$reversed = array_reverse($input);
+print_r($reversed); // Array ( [0] => Array ( [0] => green [1] => red ) [1] => 4 [2] => php )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
 ### 返回数组中指定的一列
 **[array_column()](http://php.net/manual/zh/function.array-column.php)**
 ```php
@@ -217,6 +270,19 @@ $first_names = array_column($records, 'first_name');
 print_r($first_names); // Array ( [0] => John [1] => Sally [2] => Jane [3] => Peter )
 ```
 <br>[⬆ Back to top](#table-of-contents)
+
+### 从数组中随机取出一个或多个单元
+**[array_rand()](http://php.net/manual/zh/function.array-rand.php)**
+```php
+$input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
+
+$rand_keys = array_rand($input, 2);
+print_r($rand_keys); // Array ( [0] => 2 [1] => 4 )
+echo $input[$rand_keys[0]]; // Neo
+echo $input[$rand_keys[1]]; // Tank
+```
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 操作
 ### 将数组中的所有键名修改为全大写或小写
@@ -263,6 +329,26 @@ print_r($number); // Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] =>
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
+### 去掉数组中的某一部分并用其它值取代
+**[array_splice()](http://php.net/manual/zh/function.array-splice.php)**
+```php
+$input = array("red", "green", "blue", "yellow");
+
+array_splice($input, 1, 1, "orange");
+print_r($input); //Array ( [0] => red [1] => orange [2] => blue [3] => yellow )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 在数组中搜索给定的值，如果成功则返回首个相应的键名
+**[array_search()](http://php.net/manual/zh/function.array-search.php)**
+```php
+$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
+
+$key = array_search('green', $array);
+print_r($key); // 2
+```
+<br>[⬆ Back to top](#table-of-contents)
+
 ### 打乱数组
 **[shuffle](http://php.net/manual/zh/function.shuffle.php)**
 ```php
@@ -282,6 +368,28 @@ $result = array_unique($array);
 print_r($result); // Array ( [0] => 1 [1] => hello [3] => world )
 ```
 <br>[⬆ Back to top](#table-of-contents)
+
+### 将一个数组分割成多个
+**[array_chunk()](http://php.net/manual/zh/function.array-chunk.php)**
+```php
+$input_array = array('a', 'b', 'c', 'd', 'e');
+
+$output_array = array_chunk($input_array, 2);
+print_r($output_array);
+// Array ( [0] => Array ( [0] => a [1] => b ) [1] => Array ( [0] => c [1] => d ) [2] => Array ( [0] => e ) )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 交换数组中的键和值
+**[array_flip()](http://php.net/manual/zh/function.array-flip.php)**
+```php
+$input = array("oranges", "apples", "pears");
+
+$flipped = array_flip($input);
+print_r($flipped); // Array ( [oranges] => 0 [apples] => 1 [pears] => 2 ) 
+```
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ### 创建一个数组，用一个数组的值作为其键名，另一个数组的值作为其值
 **[array_combine()](http://php.net/manual/zh/function.array-combine.php)**
@@ -486,7 +594,32 @@ print_r($array2);
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 统计检查
+### 对多个数组或多维数组进行排序
+**[array_multisort()](http://php.net/manual/zh/function.array-multisort.php)**
+```php
+$arr = array(
+    array(
+        'top' => 0,
+        'cnt' => 20,
+    ),
+    array(
+        'top' => 0,
+        'cnt' => 10,
+    ),
+    array(
+        'top' => 1,
+        'cnt' => 30,
+    ),
+);
+
+array_multisort(array_column($arr, 'top'), SORT_DESC, SORT_NUMERIC,
+    array_column($arr, 'cnt'), SORT_ASC, SORT_NUMERIC,
+    $arr);
+print_r($arr); // Array ( [0] => Array ( [top] => 1 [cnt] => 30 ) [1] => Array ( [top] => 0 [cnt] => 10 ) [2] => Array ( [top] => 0 [cnt] => 20 ) )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 计算
 ### 统计数组中元素数量
 **[count()](http://php.net/manual/zh/function.count.php)**
 ```php
@@ -506,6 +639,28 @@ print_r($result); // Array ( [1] => 2 [hello] => 2 [world] => 1 )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
+### 对数组中所有值求和
+**[array_sum()](http://php.net/manual/zh/function.array-sum.php)**
+```php
+
+$a = array(2, 4, 6, 8);
+$sum = array_sum($a);
+echo "sum(a) = " . $sum; // sum(a) = 20
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 计算数组中所有值的乘积
+**[array_product()](http://php.net/manual/zh/function.array-product.php)**
+```php
+$a = array(2, 4, 6, 8);
+
+$result = array_product($a);
+print_r($result); // 384
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 检查
 ### 检查数组里是否有指定的键名或索引
 **[array_key_exists()](http://php.net/manual/zh/function.array-key-exists.php)**
 ```php
@@ -522,18 +677,7 @@ echo in_array("Irix", $os); // 1
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-## 分割合并替换
-### 将一个数组分割成多个
-**[array_chunk()](http://php.net/manual/zh/function.array-chunk.php)**
-```php
-$input_array = array('a', 'b', 'c', 'd', 'e');
-
-$output_array = array_chunk($input_array, 2);
-print_r($output_array);
-// Array ( [0] => Array ( [0] => a [1] => b ) [1] => Array ( [0] => c [1] => d ) [2] => Array ( [0] => e ) )
-```
-<br>[⬆ Back to top](#table-of-contents)
-
+## 合并
 ### 合并一个或多个数组
 **[array_merge()](http://php.net/manual/zh/function.array-merge.php)**
 ```php
@@ -556,6 +700,7 @@ print_r($result); // Array ( [color] => Array ( [favorite] => Array ( [0] => red
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
+## 替换
 ### 使用传递的数组替换第一个数组的元素
 **[array_replace()](http://php.net/manual/zh/function.array-replace.php)**
 ```php
@@ -582,3 +727,203 @@ print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] =>
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
+## 填充
+### 使用指定的键和值填充数组
+**[array_fill_keys()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用给定的值填充数组
+**[array_fill()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 以指定长度将一个值填充进数组
+**[array_pad()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 堆栈
+### 将数组开头的单元移出数组
+**[array_shift()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 在数组开头插入一个或多个单元
+**[array_unshift()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 弹出数组最后一个单元（出栈）
+**[array_pop()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 将一个或多个单元压入数组的末尾（入栈）
+**[array_push()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 回调
+### 对数组中的每个成员递归地应用用户函数
+**[array_walk_recursive()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 使用用户自定义函数对数组中的每个元素做回调处理
+**[array_walk()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 为数组的每个元素应用回调函数
+**[array_map()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用回调函数迭代地将数组简化为单一的值
+**[array_reduce()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用回调函数过滤数组中的单元
+**[array_filter()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 差集
+### 带索引检查计算数组的差集
+**[array_diff_assoc()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 使用键名比较计算数组的差集
+**[array_diff_key()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用用户提供的回调函数做索引检查来计算数组的差集
+**[array_diff_uassoc()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用回调函数对键名比较计算数组的差集
+**[array_diff_ukey()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 计算数组的差集
+**[array_diff()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的差集，用回调函数比较数据
+**[array_udiff_assoc()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的差集，用回调函数比较数据和索引
+**[array_udiff_uassoc()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用回调函数比较数据来计算数组的差集
+**[array_udiff()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+## 交集
+### 带索引检查计算数组的交集
+**[array_intersect_assoc()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 使用键名比较计算数组的交集
+**[array_intersect_key()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的交集，用回调函数比较索引
+**[array_intersect_uassoc()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用回调函数比较键名来计算数组的交集
+**[array_intersect_ukey()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 计算数组的交集
+**[array_intersect()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的交集，用回调函数比较数据
+**[array_uintersect_assoc()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的交集，用单独的回调函数比较数据和索引
+**[array_uintersect_uassoc()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 计算数组的交集，用回调函数比较数据
+**[array_uintersect()]()**
+```php
+
+```
+<br>[⬆ Back to top](#table-of-contents)
