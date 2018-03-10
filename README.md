@@ -71,29 +71,29 @@
   - [弹出数组最后一个单元（出栈）](#%E5%BC%B9%E5%87%BA%E6%95%B0%E7%BB%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E5%85%83%E5%87%BA%E6%A0%88)
   - [将一个或多个单元压入数组的末尾（入栈）](#%E5%B0%86%E4%B8%80%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AA%E5%8D%95%E5%85%83%E5%8E%8B%E5%85%A5%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%AB%E5%B0%BE%E5%85%A5%E6%A0%88)
 - [回调](#%E5%9B%9E%E8%B0%83)
-  - [对数组中的每个成员递归地应用用户函数](#%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E6%88%90%E5%91%98%E9%80%92%E5%BD%92%E5%9C%B0%E5%BA%94%E7%94%A8%E7%94%A8%E6%88%B7%E5%87%BD%E6%95%B0)
   - [使用用户自定义函数对数组中的每个元素做回调处理](#%E4%BD%BF%E7%94%A8%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E5%81%9A%E5%9B%9E%E8%B0%83%E5%A4%84%E7%90%86)
+  - [对数组中的每个成员递归地应用用户函数](#%E5%AF%B9%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E6%88%90%E5%91%98%E9%80%92%E5%BD%92%E5%9C%B0%E5%BA%94%E7%94%A8%E7%94%A8%E6%88%B7%E5%87%BD%E6%95%B0)
   - [为数组的每个元素应用回调函数](#%E4%B8%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E5%BA%94%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0)
   - [用回调函数迭代地将数组简化为单一的值](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%BF%AD%E4%BB%A3%E5%9C%B0%E5%B0%86%E6%95%B0%E7%BB%84%E7%AE%80%E5%8C%96%E4%B8%BA%E5%8D%95%E4%B8%80%E7%9A%84%E5%80%BC)
   - [用回调函数过滤数组中的单元](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%8D%95%E5%85%83)
 - [差集](#%E5%B7%AE%E9%9B%86)
-  - [带索引检查计算数组的差集](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
-  - [使用键名比较计算数组的差集](#%E4%BD%BF%E7%94%A8%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
-  - [用用户提供的回调函数做索引检查来计算数组的差集](#%E7%94%A8%E7%94%A8%E6%88%B7%E6%8F%90%E4%BE%9B%E7%9A%84%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%81%9A%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
-  - [用回调函数对键名比较计算数组的差集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AF%B9%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
   - [计算数组的差集](#%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [用回调函数比较数据来计算数组的差集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [带索引检查计算数组的差集](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [用用户提供的回调函数做索引检查来计算数组的差集](#%E7%94%A8%E7%94%A8%E6%88%B7%E6%8F%90%E4%BE%9B%E7%9A%84%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%81%9A%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
   - [带索引检查计算数组的差集，用回调函数比较数据](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE)
   - [带索引检查计算数组的差集，用回调函数比较数据和索引](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE%E5%92%8C%E7%B4%A2%E5%BC%95)
-  - [用回调函数比较数据来计算数组的差集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [使用键名比较计算数组的差集](#%E4%BD%BF%E7%94%A8%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+  - [用回调函数对键名比较计算数组的差集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AF%B9%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
 - [交集](#%E4%BA%A4%E9%9B%86)
-  - [带索引检查计算数组的交集](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
-  - [使用键名比较计算数组的交集](#%E4%BD%BF%E7%94%A8%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
-  - [带索引检查计算数组的交集，用回调函数比较索引](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E7%B4%A2%E5%BC%95)
-  - [用回调函数比较键名来计算数组的交集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E9%94%AE%E5%90%8D%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
   - [计算数组的交集](#%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
+  - [计算数组的交集，用回调函数比较数据](#%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE)
+  - [带索引检查计算数组的交集](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
+  - [带索引检查计算数组的交集，用回调函数比较索引](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E7%B4%A2%E5%BC%95)
   - [带索引检查计算数组的交集，用回调函数比较数据](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE)
   - [带索引检查计算数组的交集，用单独的回调函数比较数据和索引](#%E5%B8%A6%E7%B4%A2%E5%BC%95%E6%A3%80%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%8D%95%E7%8B%AC%E7%9A%84%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE%E5%92%8C%E7%B4%A2%E5%BC%95)
-  - [计算数组的交集，用回调函数比较数据](#%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E6%95%B0%E6%8D%AE)
+  - [使用键名比较计算数组的交集](#%E4%BD%BF%E7%94%A8%E9%94%AE%E5%90%8D%E6%AF%94%E8%BE%83%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
+  - [用回调函数比较键名来计算数组的交集](#%E7%94%A8%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83%E9%94%AE%E5%90%8D%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -732,20 +732,29 @@ print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] =>
 **[array_fill_keys()]()**
 ```php
 
+$keys = array('foo', 5, 10, 'bar');
+
+$a = array_fill_keys($keys, 'banana');
+print_r($a); // Array ( [foo] => banana [5] => banana [10] => banana [bar] => banana )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 用给定的值填充数组
 **[array_fill()]()**
 ```php
+$a = array_fill(5, 3, 'banana');
 
+print_r($a); // Array ( [5] => banana [6] => banana [7] => banana )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 以指定长度将一个值填充进数组
 **[array_pad()]()**
 ```php
+$input = array(12, 10, 9);
 
+$result = array_pad($input, 5, 0);
+print_r($result); // Array ( [0] => 12 [1] => 10 [2] => 9 [3] => 0 [4] => 0 )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -753,43 +762,72 @@ print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] =>
 ### 将数组开头的单元移出数组
 **[array_shift()]()**
 ```php
+stack = array("orange", "banana", "apple", "raspberry");
+$fruit = array_shift($stack);
 
+print_r($stack); // Array ( [0] => banana [1] => apple [2] => raspberry )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 在数组开头插入一个或多个单元
 **[array_unshift()]()**
 ```php
+$queue = array("orange", "banana");
+array_unshift($queue, "apple", "raspberry");
 
+print_r($queue); // Array ( [0] => apple [1] => raspberry [2] => orange [3] => banana )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 弹出数组最后一个单元（出栈）
 **[array_pop()]()**
 ```php
+$stack = array("orange", "banana", "apple", "raspberry");
+$fruit = array_pop($stack);
 
+print_r($stack); // Array ( [0] => orange [1] => banana [2] => apple )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 将一个或多个单元压入数组的末尾（入栈）
 **[array_push()]()**
 ```php
+$stack = array("orange", "banana");
+array_push($stack, "apple", "raspberry");
 
+print_r($stack); // Array ( [0] => orange [1] => banana [2] => apple [3] => raspberry )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 回调
-### 对数组中的每个成员递归地应用用户函数
-**[array_walk_recursive()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
-
 ### 使用用户自定义函数对数组中的每个元素做回调处理
 **[array_walk()]()**
 ```php
+$fruits = array("d" => "lemon", "a" => "orange");
 
+function test_alter(&$item1, $key, $prefix)
+{
+    $item1 = "$prefix: $item1";
+}
+
+array_walk($fruits, 'test_alter', 'fruit');
+print_r($fruits); // Array ( [d] => fruit: lemon [a] => fruit: orange )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 对数组中的每个成员递归地应用用户函数
+**[array_walk_recursive()]()**
+```php
+$sweet = array('a' => 'apple', 'b' => 'banana');
+$fruits = array('sweet' => $sweet, 'sour' => 'lemon');
+
+function test_alter(&$item1, $key, $prefix)
+{
+    $item1 = "$prefix: $item1";
+}
+
+array_walk_recursive($fruits, 'test_alter','fruit');
+print_r($fruits); // Array ( [sweet] => Array ( [a] => fruit: apple [b] => fruit: banana ) [sour] => fruit: lemon )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -797,99 +835,320 @@ print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] =>
 **[array_map()]()**
 ```php
 
+function cube($n)
+{
+    return($n * $n * $n);
+}
+
+$a = array(1, 2, 3, 4, 5);
+
+$b = array_map("cube", $a);
+print_r($b); // Array ( [0] => 1 [1] => 8 [2] => 27 [3] => 64 [4] => 125 )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 用回调函数迭代地将数组简化为单一的值
 **[array_reduce()]()**
 ```php
+function sum($carry, $item)
+{
+    $carry += $item;
+    return $carry;
+}
 
+$a = array(1, 2, 3, 4, 5);
+
+$result = array_reduce($a, "sum");
+print_r($result); // 15
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 用回调函数过滤数组中的单元
 **[array_filter()]()**
 ```php
+function odd($var)
+{
+    // returns whether the input integer is odd
+    return($var & 1);
+}
 
+function even($var)
+{
+    // returns whether the input integer is even
+    return(!($var & 1));
+}
+
+$array1 = array("a"=>1, "b"=>2, "c"=>3, "d"=>4, "e"=>5);
+$array2 = array(6, 7, 8, 9, 10, 11, 12);
+
+print_r(array_filter($array1, "odd")); //  Array ( [a] => 1 [c] => 3 [e] => 5 )
+print_r(array_filter($array2, "even")); // Array ( [0] => 6 [2] => 8 [4] => 10 [6] => 12 )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 差集
-### 带索引检查计算数组的差集
-**[array_diff_assoc()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
-
-### 使用键名比较计算数组的差集
-**[array_diff_key()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
-
-### 用用户提供的回调函数做索引检查来计算数组的差集
-**[array_diff_uassoc()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
-
-### 用回调函数对键名比较计算数组的差集
-**[array_diff_ukey()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
-
 ### 计算数组的差集
 **[array_diff()]()**
 ```php
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "yellow", "red");
 
-```
-<br>[⬆ Back to top](#table-of-contents)
-
-### 带索引检查计算数组的差集，用回调函数比较数据
-**[array_udiff_assoc()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
-
-### 带索引检查计算数组的差集，用回调函数比较数据和索引
-**[array_udiff_uassoc()]()**
-```php
-
+$result = array_diff($array1, $array2);
+print_r($result); // Array ( [b] => brown [c] => blue ) 
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 用回调函数比较数据来计算数组的差集
 **[array_udiff()]()**
 ```php
+function value_compare_func($key1, $key2)
+{
+    if ($key1 === $key2)
+        return 0;
+    else if ($key1 > $key2)
+        return 1;
+    else
+        return -1;
+}
 
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green",  "yellow", "red");
+$result = array_udiff($array1, $array2, "value_compare_func");
+print_r($result); // Array ( [b] => brown [c] => blue )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的差集
+**[array_diff_assoc()]()**
+```php
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "yellow", "red");
+
+$result = array_diff_assoc($array1, $array2);
+print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用用户提供的回调函数做索引检查来计算数组的差集
+**[array_diff_uassoc()]()**
+```php
+function key_compare_func($a, $b)
+{
+    if ($a === $b) {
+        return 0;
+    }
+    return ($a > $b)? 1:-1;
+}
+
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "yellow", "red");
+
+$result = array_diff_uassoc($array1, $array2, "key_compare_func");
+print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的差集，用回调函数比较数据
+**[array_udiff_assoc()]()**
+```php
+function value_compare_func($key1, $key2)
+{
+    if ($key1 === $key2)
+        return 0;
+    else if ($key1 > $key2)
+        return 1;
+    else
+        return -1;
+}
+
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green",  "yellow", "red");
+$result = array_udiff_assoc($array1, $array2, "value_compare_func");
+print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的差集，用回调函数比较数据和索引
+**[array_udiff_uassoc()]()**
+```php
+function key_compare_func($key1, $key2)
+{
+    if ($key1 === $key2)
+        return 0;
+    else if ($key1 > $key2)
+        return 1;
+    else
+        return -1;
+}
+
+function value_compare_func($a, $b)
+{
+    if ($a === $b) {
+        return 0;
+    }
+    return ($a > $b)? 1:-1;
+}
+
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "yellow", "red");
+
+$result = array_udiff_uassoc($array1, $array2, "value_compare_func", "key_compare_func");
+print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 使用键名比较计算数组的差集
+**[array_diff_key()]()**
+```php
+$array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
+
+$result = array_diff_key($array1, $array2);
+print_r($result); // Array ( [red] => 2 [purple] => 4 )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 用回调函数对键名比较计算数组的差集
+**[array_diff_ukey()]()**
+```php
+function key_compare_func($key1, $key2)
+{
+    if ($key1 === $key2)
+        return 0;
+    else if ($key1 > $key2)
+        return 1;
+    else
+        return -1;
+}
+
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "b" => "yellow", "red");
+
+$result = array_diff_uassoc($array1, $array2, "key_compare_func");
+print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 交集
-### 带索引检查计算数组的交集
-**[array_intersect_assoc()]()**
+### 计算数组的交集
+**[array_intersect()]()**
 ```php
+$array1 = array("a" => "green", "red", "blue");
+$array2 = array("b" => "green", "yellow", "red");
 
+$result = array_intersect($array1, $array2);
+print_r($result); // Array ( [a] => green [0] => red )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-### 使用键名比较计算数组的交集
-**[array_intersect_key()]()**
+### 计算数组的交集，用回调函数比较数据
+**[array_uintersect()]()**
 ```php
+function value_compare_func($a, $b)
+{
+    if ($a === $b) {
+        return 0;
+    }
+    return ($a > $b)? 1:-1;
+}
 
+$array1 = array("a" => "green", "red", "blue");
+$array2 = array("b" => "green", "yellow", "red");
+
+$result = array_uintersect($array1, $array2,'value_compare_func');
+print_r($result); // Array ( [a] => green [0] => red )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的交集
+**[array_intersect_assoc()]()**
+```php
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "b" => "yellow", "blue", "red");
+
+$result_array = array_intersect_assoc($array1, $array2);
+print_r($result_array); // Array ( [a] => green )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
 ### 带索引检查计算数组的交集，用回调函数比较索引
 **[array_intersect_uassoc()]()**
 ```php
+function key_compare_func($key1, $key2)
+{
+    if ($key1 === $key2)
+        return 0;
+    else if ($key1 > $key2)
+        return 1;
+    else
+        return -1;
+}
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "b" => "yellow", "blue", "red");
 
+$result_array = array_intersect_uassoc($array1, $array2,"key_compare_func");
+print_r($result_array); // Array ( [a] => green )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 带索引检查计算数组的交集，用回调函数比较数据
+**[array_uintersect_assoc()]()**
+```php
+function value_compare_func($a, $b)
+{
+    if ($a === $b) {
+        return 0;
+    }
+    return ($a > $b) ? 1 : -1;
+}
+
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "b" => "yellow", "blue", "red");
+
+$result_array = array_uintersect_assoc($array1, $array2, "value_compare_func");
+print_r($result_array); // Array ( [a] => green )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+
+### 带索引检查计算数组的交集，用单独的回调函数比较数据和索引
+**[array_uintersect_uassoc()]()**
+```php
+function key_compare_func($key1, $key2)
+{
+    if ($key1 === $key2)
+        return 0;
+    else if ($key1 > $key2)
+        return 1;
+    else
+        return -1;
+}
+
+function value_compare_func($a, $b)
+{
+    if ($a === $b) {
+        return 0;
+    }
+    return ($a > $b) ? 1 : -1;
+}
+
+
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "b" => "yellow", "blue", "red");
+
+$result_array = array_uintersect_uassoc($array1, $array2, "value_compare_func", "key_compare_func");
+print_r($result_array); // Array ( [a] => green )
+```
+<br>[⬆ Back to top](#table-of-contents)
+
+### 使用键名比较计算数组的交集
+**[array_intersect_key()]()**
+```php
+$array1 = array('blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8);
+
+$result = array_intersect_key($array1, $array2);
+print_r($result); // Array ( [blue] => 1 [green] => 3 )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
@@ -897,33 +1156,21 @@ print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] =>
 **[array_intersect_ukey()]()**
 ```php
 
+function key_compare_func($key1, $key2)
+{
+    if ($key1 === $key2)
+        return 0;
+    else if ($key1 > $key2)
+        return 1;
+    else
+        return -1;
+}
+$array1 = array('blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8);
+
+$result = array_intersect_ukey($array1, $array2, "key_compare_func");
+print_r($result); // Array ( [blue] => 1 [green] => 3 )
 ```
 <br>[⬆ Back to top](#table-of-contents)
 
-### 计算数组的交集
-**[array_intersect()]()**
-```php
 
-```
-<br>[⬆ Back to top](#table-of-contents)
-
-### 带索引检查计算数组的交集，用回调函数比较数据
-**[array_uintersect_assoc()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
-
-### 带索引检查计算数组的交集，用单独的回调函数比较数据和索引
-**[array_uintersect_uassoc()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
-
-### 计算数组的交集，用回调函数比较数据
-**[array_uintersect()]()**
-```php
-
-```
-<br>[⬆ Back to top](#table-of-contents)
