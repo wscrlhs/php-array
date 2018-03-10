@@ -1,7 +1,7 @@
-## 收藏的PHP数组相关的知识
+## 收藏的PHP数组函数
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-## table-of-contents 
+## 目录 
 
 - [类型](#%E7%B1%BB%E5%9E%8B)
   - [索引数组](#%E7%B4%A2%E5%BC%95%E6%95%B0%E7%BB%84)
@@ -108,7 +108,7 @@ $cars[0]="Volvo";
 $cars[1]="BMW";
 $cars[2]="SAAB";
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 关联数组
 使用您分配给数组的指定键的数组。  
@@ -120,7 +120,7 @@ $age['Peter']="35";
 $age['Ben']="37";
 $age['Joe']="43";
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 多维数组
 包含一个或多个数组的数组。  
@@ -139,7 +139,7 @@ $cars[1][0] = 'BMW';
 $cars[1][0] = 15;
 $cars[1][0] = 13;
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 取值
 ### 输出数组中当前元素的值
@@ -149,7 +149,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo current($people); // 当前元素是 Bill
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 输出数组中最后一个元素的值
 **[end()](http://php.net/manual/zh/function.end.php)**
@@ -158,7 +158,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo end($people); // 最后一个元素是 David
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 输出数组中下一个元素的值
 **[next()](http://php.net/manual/zh/function.next.php)**
@@ -167,7 +167,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo next($people); // Bill 的下一个元素是 Steve
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 输出数组中上一个元素的值
 **[prev()](http://php.net/manual/zh/function.prev.php)**
@@ -176,7 +176,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo prev($people); // David 之前的元素是 Mark
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 
 ### 输出数组中第一个元素的值
@@ -186,7 +186,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 
 echo reset($people); // 把内部指针移动到数组的首个元素，即 Bill
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 输出数组中当前元素的键名和键值，并将内部指针向前移动
 **[each()](http://php.net/manual/zh/function.each.php)**
@@ -196,7 +196,7 @@ $people = array("Bill", "Steve", "Mark", "David");
 each($people); // 返回当前元素的键名和键值，即'0'=> Bill
 echo current($people); // 并将内部指针向前移动, 即Steve
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 输出数组中当前元素键名
 **[key()](http://php.net/manual/zh/function.key.php)**
@@ -205,7 +205,7 @@ $a = array('key'=>'value');
 
 echo key($a); // key
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 返回数组中部分的或所有的键名
 **[array_keys()](返回数组中部分的或所有的键名)**
@@ -216,7 +216,7 @@ $array = array(0 => 100, "color" => "red");
 $result = array_keys($array);
 print_r($result); // Array ( [0] => 0 [1] => color )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 返回数组中所有的值
 **[array_values()](http://php.net/manual/zh/function.array-values.php)**
@@ -227,7 +227,7 @@ $array = array("size" => "XL", "color" => "gold");
 $result = array_values($array);
 print_r($result); // Array ( [0] => XL [1] => gold )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 返回单元顺序相反的数组
 **[array_reverse()](http://php.net/manual/zh/function.array-reverse.php)**
@@ -237,7 +237,7 @@ $input  = array("php", 4.0, array("green", "red"));
 $reversed = array_reverse($input);
 print_r($reversed); // Array ( [0] => Array ( [0] => green [1] => red ) [1] => 4 [2] => php )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 返回数组中指定的一列
 **[array_column()](http://php.net/manual/zh/function.array-column.php)**
@@ -269,7 +269,7 @@ $records = array(
 $first_names = array_column($records, 'first_name');
 print_r($first_names); // Array ( [0] => John [1] => Sally [2] => Jane [3] => Peter )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 从数组中随机取出一个或多个单元
 **[array_rand()](http://php.net/manual/zh/function.array-rand.php)**
@@ -281,7 +281,7 @@ print_r($rand_keys); // Array ( [0] => 2 [1] => 4 )
 echo $input[$rand_keys[0]]; // Neo
 echo $input[$rand_keys[1]]; // Tank
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 
 ## 操作
@@ -298,7 +298,7 @@ print_r($case_upper); // Array ( [FIRST] => 1 [SECOND] => 4 )
 $case_lower= array_change_key_case($input_array, CASE_LOWER);
 print_r($case_lower); // Array ( [first] => 1 [second] => 4 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 从数组中取出一段
 **[array_slice()](http://php.net/manual/zh/function.array-slice.php)**
@@ -309,7 +309,7 @@ $output = array_slice($input, 2);      // returns "c", "d", and "e"
 $output = array_slice($input, -2, 1);  // returns "d"
 $output = array_slice($input, 0, 3);   // returns "a", "b", and "c"
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 把数组中的值赋给一组变量
 **[list()](http://php.net/manual/zh/function.list.php)**
@@ -319,7 +319,7 @@ $info = array('coffee', 'brown', 'caffeine');
 list($drink, $color, $power) = $info;
 echo "$drink is $color and $power makes it special."; // coffee is brown and caffeine makes it special.
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 建立一个包含指定范围单元的数组
 **[range()](http://php.net/manual/zh/function.range.php)**
@@ -327,7 +327,7 @@ echo "$drink is $color and $power makes it special."; // coffee is brown and caf
 $number = range(0, 5);
 print_r($number); // Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] => 5 ) 
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 去掉数组中的某一部分并用其它值取代
 **[array_splice()](http://php.net/manual/zh/function.array-splice.php)**
@@ -337,7 +337,7 @@ $input = array("red", "green", "blue", "yellow");
 array_splice($input, 1, 1, "orange");
 print_r($input); //Array ( [0] => red [1] => orange [2] => blue [3] => yellow )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 在数组中搜索给定的值，如果成功则返回首个相应的键名
 **[array_search()](http://php.net/manual/zh/function.array-search.php)**
@@ -347,7 +347,7 @@ $array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
 $key = array_search('green', $array);
 print_r($key); // 2
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 打乱数组
 **[shuffle](http://php.net/manual/zh/function.shuffle.php)**
@@ -357,7 +357,7 @@ $number = range(0, 5);
 shuffle($number);
 print_r($number); //  Array ( [0] => 2 [1] => 4 [2] => 0 [3] => 5 [4] => 3 [5] => 1 ) 
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 移除数组中重复的值
 **[array_unique()](http://php.net/manual/zh/function.array-unique.php)**
@@ -367,7 +367,7 @@ $array = array(1, "hello", 1, "world", "hello");
 $result = array_unique($array);
 print_r($result); // Array ( [0] => 1 [1] => hello [3] => world )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 将一个数组分割成多个
 **[array_chunk()](http://php.net/manual/zh/function.array-chunk.php)**
@@ -378,7 +378,7 @@ $output_array = array_chunk($input_array, 2);
 print_r($output_array);
 // Array ( [0] => Array ( [0] => a [1] => b ) [1] => Array ( [0] => c [1] => d ) [2] => Array ( [0] => e ) )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 交换数组中的键和值
 **[array_flip()](http://php.net/manual/zh/function.array-flip.php)**
@@ -388,7 +388,7 @@ $input = array("oranges", "apples", "pears");
 $flipped = array_flip($input);
 print_r($flipped); // Array ( [oranges] => 0 [apples] => 1 [pears] => 2 ) 
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 
 ### 创建一个数组，用一个数组的值作为其键名，另一个数组的值作为其值
@@ -400,7 +400,7 @@ $b = array('avocado', 'apple', 'banana');
 $c = array_combine($a, $b);
 print_r($c); // Array ( [green] => avocado [red] => apple [yellow] => banana )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 创建包含变量名和它们的值的数组
 **[compact()[http://php.net/manual/zh/function.compact.php)**
@@ -413,7 +413,7 @@ $result = compact("firstname", "lastname", "age");
 
 print_r($result); // Array ( [firstname] => Bill [lastname] => Gates [age] => 60 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 从数组中将变量导入到当前的符号表
 **[extract()](http://php.net/manual/zh/function.extract.php)**
@@ -425,7 +425,7 @@ extract($var_array);
 
 echo "$color, $size, $shape"; // blue, medium, sphere
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 排序
 ### 对数组排序,由低到高
@@ -438,7 +438,7 @@ $fruits = array("lemon", "orange", "banana", "apple");
 sort($fruits);
 print_r($fruits); //  Array ( [0] => apple [1] => banana [2] => lemon [3] => orange )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 对数组逆向排序,由高到低
 **[rsort()](http://php.net/manual/zh/function.rsort.php)**
@@ -450,7 +450,7 @@ $fruits = array("lemon", "orange", "banana", "apple");
 rsort($fruits);
 print_r($fruits); // Array ( [0] => orange [1] => lemon [2] => banana [3] => apple )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 对数组按照键名排序,由低到高
 **[ksort()](http://php.net/manual/zh/function.ksort.php)**
@@ -462,7 +462,7 @@ $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
 ksort($fruits);
 print_r($fruits); // Array ( [a] => orange [b] => banana [c] => apple [d] => lemon )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 对数组按照键名逆向排序,由高到低
 **[krsort()](http://php.net/manual/zh/function.krsort.php)**
@@ -474,7 +474,7 @@ $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
 krsort($fruits);
 print_r($fruits); // Array ( [d] => lemon [c] => apple [b] => banana [a] => orange )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ###  对数组进行排序并保持索引关系,由低到高
 **[asort()](http://php.net/manual/zh/function.asort.php)**
@@ -486,7 +486,7 @@ $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
 asort($fruits);
 print_r($fruits); // Array ( [c] => apple [b] => banana [d] => lemon [a] => orange )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 对数组进行逆向排序并保持索引关系,由高到低
 **[arsort()](http://php.net/manual/zh/function.arsort.php)**
@@ -498,7 +498,7 @@ $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
 arsort($fruits);
 print_r($fruits); // Array ( [a] => orange [d] => lemon [b] => banana [c] => apple )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 使用用户自定义的比较函数对数组中的值进行排序
 **[usort()](http://php.net/manual/zh/function.usort.php)**
@@ -518,7 +518,7 @@ $a = array(3, 2, 5, 6, 1);
 usort($a, "cmp");
 print_r($a); // Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 5 [4] => 6 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 使用用户自定义的比较函数对数组中的值进行排序并保持索引关联
 **[uasort()](http://php.net/manual/zh/function.uasort.php)**
@@ -538,7 +538,7 @@ $array = array('a' => 4, 'b' => 8, 'c' => -1, 'd' => -9, 'e' => 2, 'f' => 5, 'g'
 uasort($array, 'cmp');
 print_r($array); // Array ( [d] => -9 [h] => -4 [c] => -1 [e] => 2 [g] => 3 [a] => 4 [f] => 5 [b] => 8 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 使用用户自定义的比较函数对数组中的键名进行排序
 **[uksort()](http://php.net/manual/zh/function.uksort.php)**
@@ -558,7 +558,7 @@ $array = array('f' => 5, 'a' => 4, 'h' => -4, 'd' => -9, 'c' => -1, 'e' => 2, 'g
 uksort($array, 'cmp');
 print_r($array); // Array ( [a] => 4 [b] => 8 [c] => -1 [d] => -9 [e] => 2 [f] => 5 [g] => 3 [h] => -4 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用“自然排序”算法对数组排序
 **[natsort()](http://php.net/manual/zh/function.natsort.php)**
@@ -574,7 +574,7 @@ print_r($array1); //  Array ( [3] => img1.png [1] => img10.png [0] => img12.png 
 natsort($array2);
 print_r($array2); // Array ( [3] => img1.png [2] => img2.png [1] => img10.png [0] => img12.png )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用“自然排序”算法对数组进行不区分大小写字母的排序
 **[natcasesort()](http://php.net/manual/zh/function.natcasesort.php)**
@@ -592,7 +592,7 @@ natcasesort($array2);
 print_r($array2); 
 // Array ( [0] => IMG0.png [4] => img1.png [3] => img2.png [5] => IMG3.png [2] => img10.png [1] => img12.png )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 对多个数组或多维数组进行排序
 **[array_multisort()](http://php.net/manual/zh/function.array-multisort.php)**
@@ -617,7 +617,7 @@ array_multisort(array_column($arr, 'top'), SORT_DESC, SORT_NUMERIC,
     $arr);
 print_r($arr); // Array ( [0] => Array ( [top] => 1 [cnt] => 30 ) [1] => Array ( [top] => 0 [cnt] => 10 ) [2] => Array ( [top] => 0 [cnt] => 20 ) )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 计算
 ### 统计数组中元素数量
@@ -627,7 +627,7 @@ $a = array(0,1,2,3);
 
 echo count($a); // 4
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 统计数组中所有的值
 **[array_count_values()](http://php.net/manual/zh/function.array-count-values.php)**
@@ -637,7 +637,7 @@ $array = array(1, "hello", 1, "world", "hello");
 $result = array_count_values($array);
 print_r($result); // Array ( [1] => 2 [hello] => 2 [world] => 1 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 对数组中所有值求和
 **[array_sum()](http://php.net/manual/zh/function.array-sum.php)**
@@ -647,7 +647,7 @@ $a = array(2, 4, 6, 8);
 $sum = array_sum($a);
 echo "sum(a) = " . $sum; // sum(a) = 20
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 计算数组中所有值的乘积
 **[array_product()](http://php.net/manual/zh/function.array-product.php)**
@@ -657,7 +657,7 @@ $a = array(2, 4, 6, 8);
 $result = array_product($a);
 print_r($result); // 384
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 
 ## 检查
@@ -667,7 +667,7 @@ print_r($result); // 384
 $search_array = array('first' => 1, 'second' => 4);
 echo array_key_exists('first', $search_array); // 1
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 检查数组中是否存在某个值
 **[in_array()](http://php.net/manual/zh/function.in-array.php)**
@@ -675,7 +675,7 @@ echo array_key_exists('first', $search_array); // 1
 $os = array("Mac", "NT", "Irix", "Linux");
 echo in_array("Irix", $os); // 1
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 合并
 ### 合并一个或多个数组
@@ -687,7 +687,7 @@ $array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
 $result = array_merge($array1, $array2);
 print_r($result); // Array ( [color] => green [0] => 2 [1] => 4 [2] => a [3] => b [shape] => trapezoid [4] => 4 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 递归地合并一个或多个数组
 **[array_merge_recursive()](http://php.net/manual/zh/function.array-merge-recursive.php)**
@@ -698,7 +698,7 @@ $ar2 = array(10, "color" => array("favorite" => "green", "blue"));
 $result = array_merge_recursive($ar1, $ar2);
 print_r($result); // Array ( [color] => Array ( [favorite] => Array ( [0] => red [1] => green ) [0] => blue ) [0] => 5 [1] => 10 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 替换
 ### 使用传递的数组替换第一个数组的元素
@@ -711,7 +711,7 @@ $replacements2 = array(0 => "grape");
 $basket = array_replace($base, $replacements, $replacements2);
 print_r($basket); // Array ( [0] => grape [1] => banana [2] => apple [3] => raspberry [4] => cherry )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 使用传递的数组递归替换第一个数组的元素
 **[array_replace_recursive()](http://php.net/manual/zh/function.array-replace-recursive.php)**
@@ -725,7 +725,7 @@ print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] =>
 $basket = array_replace($base, $replacements);
 print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] => Array ( [0] => blueberry ) )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 填充
 ### 使用指定的键和值填充数组
@@ -737,7 +737,7 @@ $keys = array('foo', 5, 10, 'bar');
 $a = array_fill_keys($keys, 'banana');
 print_r($a); // Array ( [foo] => banana [5] => banana [10] => banana [bar] => banana )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用给定的值填充数组
 **[array_fill()]()**
@@ -746,7 +746,7 @@ $a = array_fill(5, 3, 'banana');
 
 print_r($a); // Array ( [5] => banana [6] => banana [7] => banana )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 以指定长度将一个值填充进数组
 **[array_pad()]()**
@@ -756,7 +756,7 @@ $input = array(12, 10, 9);
 $result = array_pad($input, 5, 0);
 print_r($result); // Array ( [0] => 12 [1] => 10 [2] => 9 [3] => 0 [4] => 0 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 堆栈
 ### 将数组开头的单元移出数组
@@ -767,7 +767,7 @@ $fruit = array_shift($stack);
 
 print_r($stack); // Array ( [0] => banana [1] => apple [2] => raspberry )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 在数组开头插入一个或多个单元
 **[array_unshift()]()**
@@ -777,7 +777,7 @@ array_unshift($queue, "apple", "raspberry");
 
 print_r($queue); // Array ( [0] => apple [1] => raspberry [2] => orange [3] => banana )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 弹出数组最后一个单元（出栈）
 **[array_pop()]()**
@@ -787,7 +787,7 @@ $fruit = array_pop($stack);
 
 print_r($stack); // Array ( [0] => orange [1] => banana [2] => apple )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 将一个或多个单元压入数组的末尾（入栈）
 **[array_push()]()**
@@ -797,7 +797,7 @@ array_push($stack, "apple", "raspberry");
 
 print_r($stack); // Array ( [0] => orange [1] => banana [2] => apple [3] => raspberry )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 回调
 ### 使用用户自定义函数对数组中的每个元素做回调处理
@@ -813,7 +813,7 @@ function test_alter(&$item1, $key, $prefix)
 array_walk($fruits, 'test_alter', 'fruit');
 print_r($fruits); // Array ( [d] => fruit: lemon [a] => fruit: orange )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 对数组中的每个成员递归地应用用户函数
 **[array_walk_recursive()]()**
@@ -829,7 +829,7 @@ function test_alter(&$item1, $key, $prefix)
 array_walk_recursive($fruits, 'test_alter','fruit');
 print_r($fruits); // Array ( [sweet] => Array ( [a] => fruit: apple [b] => fruit: banana ) [sour] => fruit: lemon )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 为数组的每个元素应用回调函数
 **[array_map()]()**
@@ -845,7 +845,7 @@ $a = array(1, 2, 3, 4, 5);
 $b = array_map("cube", $a);
 print_r($b); // Array ( [0] => 1 [1] => 8 [2] => 27 [3] => 64 [4] => 125 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用回调函数迭代地将数组简化为单一的值
 **[array_reduce()]()**
@@ -861,7 +861,7 @@ $a = array(1, 2, 3, 4, 5);
 $result = array_reduce($a, "sum");
 print_r($result); // 15
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用回调函数过滤数组中的单元
 **[array_filter()]()**
@@ -884,7 +884,7 @@ $array2 = array(6, 7, 8, 9, 10, 11, 12);
 print_r(array_filter($array1, "odd")); //  Array ( [a] => 1 [c] => 3 [e] => 5 )
 print_r(array_filter($array2, "even")); // Array ( [0] => 6 [2] => 8 [4] => 10 [6] => 12 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 差集
 ### 计算数组的差集
@@ -896,7 +896,7 @@ $array2 = array("a" => "green", "yellow", "red");
 $result = array_diff($array1, $array2);
 print_r($result); // Array ( [b] => brown [c] => blue ) 
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用回调函数比较数据来计算数组的差集
 **[array_udiff()]()**
@@ -916,7 +916,7 @@ $array2 = array("a" => "green",  "yellow", "red");
 $result = array_udiff($array1, $array2, "value_compare_func");
 print_r($result); // Array ( [b] => brown [c] => blue )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 带索引检查计算数组的差集
 **[array_diff_assoc()]()**
@@ -927,7 +927,7 @@ $array2 = array("a" => "green", "yellow", "red");
 $result = array_diff_assoc($array1, $array2);
 print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用用户提供的回调函数做索引检查来计算数组的差集
 **[array_diff_uassoc()]()**
@@ -946,7 +946,7 @@ $array2 = array("a" => "green", "yellow", "red");
 $result = array_diff_uassoc($array1, $array2, "key_compare_func");
 print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 带索引检查计算数组的差集，用回调函数比较数据
 **[array_udiff_assoc()]()**
@@ -966,7 +966,7 @@ $array2 = array("a" => "green",  "yellow", "red");
 $result = array_udiff_assoc($array1, $array2, "value_compare_func");
 print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 带索引检查计算数组的差集，用回调函数比较数据和索引
 **[array_udiff_uassoc()]()**
@@ -995,7 +995,7 @@ $array2 = array("a" => "green", "yellow", "red");
 $result = array_udiff_uassoc($array1, $array2, "value_compare_func", "key_compare_func");
 print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 使用键名比较计算数组的差集
 **[array_diff_key()]()**
@@ -1006,7 +1006,7 @@ $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
 $result = array_diff_key($array1, $array2);
 print_r($result); // Array ( [red] => 2 [purple] => 4 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用回调函数对键名比较计算数组的差集
 **[array_diff_ukey()]()**
@@ -1027,7 +1027,7 @@ $array2 = array("a" => "green", "b" => "yellow", "red");
 $result = array_diff_uassoc($array1, $array2, "key_compare_func");
 print_r($result); // Array ( [b] => brown [c] => blue [0] => red )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ## 交集
 ### 计算数组的交集
@@ -1039,7 +1039,7 @@ $array2 = array("b" => "green", "yellow", "red");
 $result = array_intersect($array1, $array2);
 print_r($result); // Array ( [a] => green [0] => red )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 计算数组的交集，用回调函数比较数据
 **[array_uintersect()]()**
@@ -1058,7 +1058,7 @@ $array2 = array("b" => "green", "yellow", "red");
 $result = array_uintersect($array1, $array2,'value_compare_func');
 print_r($result); // Array ( [a] => green [0] => red )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 带索引检查计算数组的交集
 **[array_intersect_assoc()]()**
@@ -1069,7 +1069,7 @@ $array2 = array("a" => "green", "b" => "yellow", "blue", "red");
 $result_array = array_intersect_assoc($array1, $array2);
 print_r($result_array); // Array ( [a] => green )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 带索引检查计算数组的交集，用回调函数比较索引
 **[array_intersect_uassoc()]()**
@@ -1089,7 +1089,7 @@ $array2 = array("a" => "green", "b" => "yellow", "blue", "red");
 $result_array = array_intersect_uassoc($array1, $array2,"key_compare_func");
 print_r($result_array); // Array ( [a] => green )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 带索引检查计算数组的交集，用回调函数比较数据
 **[array_uintersect_assoc()]()**
@@ -1108,7 +1108,7 @@ $array2 = array("a" => "green", "b" => "yellow", "blue", "red");
 $result_array = array_uintersect_assoc($array1, $array2, "value_compare_func");
 print_r($result_array); // Array ( [a] => green )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 
 ### 带索引检查计算数组的交集，用单独的回调函数比较数据和索引
@@ -1139,7 +1139,7 @@ $array2 = array("a" => "green", "b" => "yellow", "blue", "red");
 $result_array = array_uintersect_uassoc($array1, $array2, "value_compare_func", "key_compare_func");
 print_r($result_array); // Array ( [a] => green )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 使用键名比较计算数组的交集
 **[array_intersect_key()]()**
@@ -1150,7 +1150,7 @@ $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8);
 $result = array_intersect_key($array1, $array2);
 print_r($result); // Array ( [blue] => 1 [green] => 3 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 用回调函数比较键名来计算数组的交集
 **[array_intersect_ukey()]()**
@@ -1171,6 +1171,6 @@ $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8);
 $result = array_intersect_ukey($array1, $array2, "key_compare_func");
 print_r($result); // Array ( [blue] => 1 [green] => 3 )
 ```
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 
