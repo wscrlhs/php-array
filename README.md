@@ -1,7 +1,7 @@
 ## 收藏的PHP数组函数
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-## 目录 
+## 目录
 
 - [类型](#%E7%B1%BB%E5%9E%8B)
   - [索引数组](#%E7%B4%A2%E5%BC%95%E6%95%B0%E7%BB%84)
@@ -98,12 +98,12 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 类型
-### 索引数组   
-带有数字索引的数组  
+### 索引数组
+带有数字索引的数组
 ```php
 $cars=array("Volvo","BMW","SAAB");
 
-// anathor ways
+// anothor ways
 $cars[0]="Volvo";
 $cars[1]="BMW";
 $cars[2]="SAAB";
@@ -111,7 +111,7 @@ $cars[2]="SAAB";
 <br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 关联数组
-使用您分配给数组的指定键的数组。  
+使用您分配给数组的指定键的数组。
 ```php
 $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
 
@@ -123,7 +123,7 @@ $age['Joe']="43";
 <br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 多维数组
-包含一个或多个数组的数组。  
+包含一个或多个数组的数组。
 ```php
 $cars = array
   (
@@ -293,7 +293,7 @@ $input_array = array("FirSt" => 1, "SecOnd" => 4);
 
 // upper
 $case_upper = array_change_key_case($input_array, CASE_UPPER);
-print_r($case_upper); // Array ( [FIRST] => 1 [SECOND] => 4 ) 
+print_r($case_upper); // Array ( [FIRST] => 1 [SECOND] => 4 )
 // lower
 $case_lower= array_change_key_case($input_array, CASE_LOWER);
 print_r($case_lower); // Array ( [first] => 1 [second] => 4 )
@@ -325,7 +325,7 @@ echo "$drink is $color and $power makes it special."; // coffee is brown and caf
 **[range()](http://php.net/manual/zh/function.range.php)**
 ```php
 $number = range(0, 5);
-print_r($number); // Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] => 5 ) 
+print_r($number); // Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] => 5 )
 ```
 <br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
@@ -355,7 +355,7 @@ print_r($key); // 2
 $number = range(0, 5);
 
 shuffle($number);
-print_r($number); //  Array ( [0] => 2 [1] => 4 [2] => 0 [3] => 5 [4] => 3 [5] => 1 ) 
+print_r($number); //  Array ( [0] => 2 [1] => 4 [2] => 0 [3] => 5 [4] => 3 [5] => 1 )
 ```
 <br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
@@ -386,7 +386,7 @@ print_r($output_array);
 $input = array("oranges", "apples", "pears");
 
 $flipped = array_flip($input);
-print_r($flipped); // Array ( [oranges] => 0 [apples] => 1 [pears] => 2 ) 
+print_r($flipped); // Array ( [oranges] => 0 [apples] => 1 [pears] => 2 )
 ```
 <br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
@@ -568,7 +568,7 @@ $array1 = $array2 = array("img12.png", "img10.png", "img2.png", "img1.png");
 
 // Standard sorting
 asort($array1);
-print_r($array1); //  Array ( [3] => img1.png [1] => img10.png [0] => img12.png [2] => img2.png ) 
+print_r($array1); //  Array ( [3] => img1.png [1] => img10.png [0] => img12.png [2] => img2.png )
 
 //nNatural order sorting
 natsort($array2);
@@ -589,7 +589,7 @@ print_r($array1);
 
 // nNatural order sorting (case-insensitive)
 natcasesort($array2);
-print_r($array2); 
+print_r($array2);
 // Array ( [0] => IMG0.png [4] => img1.png [3] => img2.png [5] => IMG3.png [2] => img10.png [1] => img12.png )
 ```
 <br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
@@ -720,7 +720,7 @@ $base = array('citrus' => array( "orange") , 'berries' => array("blackberry", "r
 $replacements = array('citrus' => array('pineapple'), 'berries' => array('blueberry'));
 
 $basket = array_replace_recursive($base, $replacements);
-print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] => Array ( [0] => blueberry [1] => raspberry ) 
+print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] => Array ( [0] => blueberry [1] => raspberry )
 
 $basket = array_replace($base, $replacements);
 print_r($basket); // Array ( [citrus] => Array ( [0] => pineapple ) [berries] => Array ( [0] => blueberry ) )
@@ -894,7 +894,7 @@ $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
 $array2 = array("a" => "green", "yellow", "red");
 
 $result = array_diff($array1, $array2);
-print_r($result); // Array ( [b] => brown [c] => blue ) 
+print_r($result); // Array ( [b] => brown [c] => blue )
 ```
 <br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
