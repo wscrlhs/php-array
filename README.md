@@ -403,7 +403,7 @@ print_r($c); // Array ( [green] => avocado [red] => apple [yellow] => banana )
 <br>[⬆ Back to top](#%E7%9B%AE%E5%BD%95)
 
 ### 创建包含变量名和它们的值的数组
-**[compact()[http://php.net/manual/zh/function.compact.php)**
+**[compact()][http://php.net/manual/zh/function.compact.php)**
 ```php
 $firstname = "Bill";
 $lastname = "Gates";
